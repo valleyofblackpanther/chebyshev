@@ -124,7 +124,7 @@ P = chebyPolyfit(my_function, n, -1, 1)  # Fit in the domain [-1, 1]
 
 The script is set up to approximate the hyperbolic tangent function (`tanh(x)`) over the interval \([0, 1]\) using a 10th-degree Chebyshev polynomial by default. This can be easily modified to fit other functions or intervals as needed.
 
-5. # Optimized Chebyshev Polynomial Approximation
+5. [Optimized Chebyshev Polynomial Approximation](https://github.com/valleyofblackpanther/chebyshev/blob/master/op.py)
 
 This Python module introduces the `ChebyshevOptimized` class, an optimized implementation for approximating and evaluating functions using Chebyshev polynomials. Utilizing the Fast Fourier Transform (FFT) for efficient coefficient computation and Clenshaw's recurrence for evaluation, this class offers a fast and accurate method for function approximation within a user-defined interval.
 
@@ -170,7 +170,7 @@ print(f"Approximated value at x={x}: {chebyshev.eval(x)}")
 
 The provided example demonstrates how to approximate the cosine function over the interval `[-1, 1]` using a 10th-degree Chebyshev polynomial.
 
-6. # Enhanced Chebyshev Polynomial Approximation with JIT Optimization
+6. [Enhanced Chebyshev Polynomial Approximation with JIT Optimization](https://github.com/valleyofblackpanther/chebyshev/blob/master/op2.py)
 
 This Python module offers an optimized approach to computing and evaluating Chebyshev polynomials for function approximation, utilizing the Discrete Cosine Transform (DCT) for efficient coefficient calculation and JIT compilation for performance-critical numerical algorithms. This implementation aims to provide fast, accurate function approximations over specified intervals using Chebyshev polynomial techniques.
 
@@ -215,7 +215,7 @@ print(f"Approximated value at x={x}: {chebyshev.eval(x)}")
 
 The example provided demonstrates how to approximate the sine function over the interval `[0, π]` using a 10th-degree Chebyshev polynomial.
 
-7. # Polynomial Fit and Error Analysis
+7. [Polynomial Fit and Error Analysis](https://github.com/valleyofblackpanther/chebyshev/blob/master/r3.py)
 
 This Python script provides a framework for fitting a polynomial to a given function over a specified interval and analyzing the error of the fit. It demonstrates initializing points across the interval, performing a polynomial fit to the function at these points, and conducting an error analysis to compare the original function to the polynomial approximation. Visualization of the fit and error analysis are also included.
 
@@ -253,7 +253,7 @@ The script generates two plots:
 
 The provided example approximates the hyperbolic tangent function over the interval `[0, π]` using a polynomial fit based on 5 initial points.
 
-8. # Simplified Remez Exchange Algorithm for FIR Filter Design
+8. [Simplified Remez Exchange Algorithm for FIR Filter Design](https://github.com/valleyofblackpanther/chebyshev/blob/master/remez.py)
 
 This Python script provides a simplified implementation of the Remez exchange algorithm. The algorithm is a powerful tool for designing finite impulse response (FIR) filters that meet specified criteria in terms of passband, stopband, and transition band characteristics. This implementation includes functions for generating an initial guess of extremal frequencies, solving a linear system to find filter coefficients, computing the error between the actual and desired filter response, and iteratively updating the extremal frequencies to minimize the maximum error.
 
@@ -284,7 +284,7 @@ To use this script for FIR filter design:
 
 The script includes an example usage section where a desired response function is defined, and the Remez algorithm is called with a specified number of taps and band edges.
 
-9. # Basic Remez Exchange Algorithm Framework
+9. [Basic Remez Exchange Algorithm Framework](https://github.com/valleyofblackpanther/chebyshev/blob/master/remrezcheby.py)
 
 This Python script introduces a basic framework for implementing the Remez exchange algorithm, an iterative method used in the design of FIR filters that optimally meet a specified frequency response. The script outlines the core steps of the algorithm, including initializing extremal frequencies, solving for filter coefficients, computing the approximation error, and iteratively refining the solution to minimize the maximum error across the filter's frequency band.
 
