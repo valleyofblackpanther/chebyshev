@@ -1,0 +1,191 @@
+{
+  "functions": [
+    {
+      "name": "heavy_L",
+      "param_decls": {},
+      "port_declarations": {
+        "outv": {
+          "name": "outv",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "output"
+        }
+      },
+      "operand_declarations": {},
+      "positional_arg_declarations": [
+        {
+          "name": "outv",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "output"
+        }
+      ],
+      "body": [
+        {
+          "function": "prepare_int",
+          "positional_args": [
+            {
+              "expr": "1"
+            },
+            {
+              "name": "outv"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "compute_tanh",
+      "param_decls": {
+        "precision": {
+          "kind": "int"
+        }
+      },
+      "port_declarations": {
+        "x": {
+          "name": "x",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "inout"
+        },
+        "tanh_x": {
+          "name": "tanh_x",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "output"
+        }
+      },
+      "operand_declarations": {},
+      "positional_arg_declarations": [
+        {
+          "name": "precision",
+          "classical_type": {
+            "kind": "int"
+          }
+        },
+        {
+          "name": "x",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "inout"
+        },
+        {
+          "name": "tanh_x",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "output"
+        }
+      ],
+      "body": [
+        {
+          "name": "outv",
+          "quantum_type": {
+            "kind": "qnum"
+          }
+        },
+        {
+          "function": "heavy_L",
+          "positional_args": [
+            {
+              "name": "outv"
+            }
+          ]
+        },
+        {
+          "expression": {
+            "expr": "(x) - (outv)"
+          },
+          "result_var": {
+            "name": "tanh_x"
+          },
+          "inplace_result": false
+        }
+      ]
+    },
+    {
+      "name": "main",
+      "param_decls": {},
+      "port_declarations": {
+        "x": {
+          "name": "x",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "output"
+        },
+        "y": {
+          "name": "y",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "output"
+        }
+      },
+      "operand_declarations": {},
+      "positional_arg_declarations": [
+        {
+          "name": "x",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "output"
+        },
+        {
+          "name": "y",
+          "quantum_type": {
+            "kind": "qnum"
+          },
+          "direction": "output"
+        }
+      ],
+      "body": [
+        {
+          "function": "allocate_num",
+          "positional_args": [
+            {
+              "expr": "4"
+            },
+            {
+              "expr": "False"
+            },
+            {
+              "expr": "4"
+            },
+            {
+              "name": "x"
+            }
+          ]
+        },
+        {
+          "function": "hadamard_transform",
+          "positional_args": [
+            {
+              "name": "x"
+            }
+          ]
+        },
+        {
+          "function": "compute_tanh",
+          "positional_args": [
+            {
+              "expr": "4"
+            },
+            {
+              "name": "x"
+            },
+            {
+              "name": "y"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "types": []
+}
