@@ -1,4 +1,4 @@
-1. [# Chebyshev Polynomial Fitting and Visualization](https://github.com/valleyofblackpanther/chebyshev/blob/master/ch.py)
+1. [Chebyshev Polynomial Fitting and Visualization](https://github.com/valleyofblackpanther/chebyshev/blob/master/ch.py)
 
 This Python script demonstrates how to approximate a function using a Chebyshev polynomial of the first kind and visualize the results. The approximation is performed over the interval \([-1, 1]\) using the function's values at Chebyshev nodes. This method is particularly useful for functions that can be closely approximated by polynomials, offering a way to analyze and visualize the accuracy of the polynomial approximation.
 
@@ -28,7 +28,7 @@ The script will plot three elements:
 
 By default, the script approximates the sine function (`np.sin(x)`) using a 10th-degree Chebyshev polynomial. This can be changed to any function and degree as required.
 
-2. # Chebyshev Polynomial Approximation of tanh(x)
+2. [Chebyshev Polynomial Approximation of tanh(x)](https://github.com/valleyofblackpanther/chebyshev/blob/master/ch1.py)
 
 This Python script showcases the approximation of the hyperbolic tangent function (`tanh(x)`) using Chebyshev polynomials within the interval \([0, 1]\). The script generates Chebyshev nodes for the specified degree, calculates the function values at these nodes, and performs a polynomial fit using these values. It employs NumPy for numerical calculations and Matplotlib for visualizing the original function, the Chebyshev nodes, and the polynomial approximation.
 
@@ -61,7 +61,7 @@ The script will output a plot that includes:
 
 By setting `n = 20`, the script approximates the `tanh(x)` function using a 20th-degree Chebyshev polynomial and visualizes the approximation alongside the original function and nodes.
 
-3. # Enhanced Chebyshev Polynomial Approximation of tanh(x)
+3. [Enhanced Chebyshev Polynomial Approximation of tanh(x)](https://github.com/valleyofblackpanther/chebyshev/blob/master/ch2.py)
 
 This script enhances the approximation of the hyperbolic tangent function (`tanh(x)`) using Chebyshev polynomials by incorporating normalization and denormalization processes. These processes allow the approximation to be performed over the interval \([0, 1]\), with the original Chebyshev nodes defined in the interval \([-1, 1]\). This approach facilitates a more versatile function approximation, particularly useful for functions defined in different domains.
 
@@ -88,7 +88,7 @@ To use this script:
 
 The default script configuration approximates the `tanh(x)` function over \([0, 1]\) using a 5th-degree Chebyshev polynomial. Adjust `n` to change the approximation's degree.
 
-4.# Chebyshev Polynomial Fitting and Visualization
+4.[Chebyshev Polynomial Fitting and Visualization](https://github.com/valleyofblackpanther/chebyshev/blob/master/ch3.py)
 
 This Python script demonstrates how to perform Chebyshev polynomial fitting on any given function within a specified domain and visualize the fitting process. The script calculates the Chebyshev nodes within the given interval, evaluates the function at these nodes, and uses the evaluations to perform a polynomial fit. It then plots the original function, the Chebyshev nodes, and the polynomial approximation for comparison.
 
